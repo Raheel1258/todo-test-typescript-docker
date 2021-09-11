@@ -1,0 +1,11 @@
+.form-container{
+    display: flex;
+    width: 100%; 
+    align-items: center
+}
+
+.input-item{
+    width: 80%;
+    margin-right:10px !important
+}
+

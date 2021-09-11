@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from 'react'
 import { Input, Form, Button } from 'antd'
 import { TodoItem } from '../../models'
 
+import './style.css'
+
 const TodoInput: React.FC<TodoInputProps> = ({
   onSubmit,
   editItem,
@@ -15,19 +17,20 @@ const TodoInput: React.FC<TodoInputProps> = ({
   return (
     <Fragment>
       <Form
+        className="form-container"
         form={form}
         onFinish={(value) => {
           onSubmit(value)
           form.resetFields()
         }}
-        style={{ display: 'flex', width: '100%', alignItems: 'center' }}
       >
-        <Form.Item name="title" style={{ width: '100%', marginRight: '15px' }}>
-          <Input placeholder="Enter title" />
+        <Form.Item name="title" className='input-item'>
+          <Input placeholder="Enter title"  />
         </Form.Item>
         <Form.Item
           name="description"
-          style={{ width: '100%', marginRight: '15px' }}
+          className='input-item'
+          
         >
           <Input placeholder="Enter description" />
         </Form.Item>

@@ -35,7 +35,6 @@ export const TodoContainer: React.FC = () => {
     }
   }
   const onEdit = (item: TodoItem) => {
-    console.log(item)
     setEditItem(item)
   }
 
